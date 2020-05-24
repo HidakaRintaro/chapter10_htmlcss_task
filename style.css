@@ -15,30 +15,64 @@ main {
   margin: 50px auto;
 }
 
-section {
-  position: relative;
+.step-box {
+  float: left;
   width: 300px;
   padding: 10px;
-  border: 1px solid lightgray;
-  float: left;
+  position: relative;
+  border: 1px solid #eee;
 }
 
-section:not(:last-child) {
+.step-box:not(:last-child) {
   margin-right: 30px;
 }
 
-.step {
+.step-img1 {
+  height: 150px;
+  background-image: url(img/flow01.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.step-img2 {
+  height: 150px;
+  background-image: url(img/flow02.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.step-img3 {
+  height: 150px;
+  background-image: url(img/flow03.png);
+  background-size: cover;
+  background-position: bottom;
+}
+
+.step-num {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: orange;
+  background-color: #FF9A4B;
   color: #fff;
   padding: 3px;
 }
 
-img {
-  width: 280px;
-  height: 150px;
-  object-fit: cover;
-  object-position: center;
+.title {
+  margin: 15px 0 5px;
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    width: 90%;
+    margin: 50px auto;
+  }
+
+  .step-box {
+    float: none;
+    width: 100%;
+  }
+
+  .step-box:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
 }
